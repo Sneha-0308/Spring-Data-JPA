@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
@@ -59,7 +60,16 @@ public class SpringprojectApplication {
 //        System.out.println(list);
 
 //        6]DELETE SINGLE ENTITY
-        userRepository.deleteById(11);
+//        userRepository.deleteById(11);
+        List<User> users=userRepository.findByName("name8"); //findByName() is custom finder method
+        System.out.println(users);
+
+
+        List<User> userList=userRepository.findByNameAndCity("user1","city1");
+        System.out.println(userList);
+
+        List<User> userList1=userRepository.findByNameStartingWith("user");
+        System.out.println(userList1);
     }
 
 }
