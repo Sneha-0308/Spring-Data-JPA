@@ -17,8 +17,7 @@ public class User {
     public User() {
     }
 
-    public User(int id, String name, String city, String status) {
-        this.id = id;
+    public User( String name, String city, String status) {
         this.name = name;
         this.city = city;
         this.status = status;
