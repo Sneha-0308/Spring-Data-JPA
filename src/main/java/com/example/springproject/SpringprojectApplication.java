@@ -61,15 +61,36 @@ public class SpringprojectApplication {
 
 //        6]DELETE SINGLE ENTITY
 //        userRepository.deleteById(11);
-        List<User> users=userRepository.findByName("name8"); //findByName() is custom finder method
-        System.out.println(users);
+
+//        ******************************CUSTOM QUERY***************************
+//        List<User> users=userRepository.findByName("name8"); //findByName() is custom finder method
+//        System.out.println(users);
+//
+//
+//        List<User> userList=userRepository.findByNameAndCity("user1","city1");
+//        System.out.println(userList);
+//
+//        List<User> userList1=userRepository.findByNameStartingWith("user");
+//        System.out.println(userList1);
 
 
-        List<User> userList=userRepository.findByNameAndCity("user1","city1");
-        System.out.println(userList);
 
-        List<User> userList1=userRepository.findByNameStartingWith("user");
-        System.out.println(userList1);
+
+
+//        ***************************CUSTOM QUERY USING @Query ANNOTATION AND USING JPQL OR NATIVE QUERY
+//        List<User> userList=userRepository.getAllUser();
+//        System.out.println(userList);
+
+//        List<User> list=userRepository.getUserByName("user2");
+//        System.out.println(list);
+
+//          List<User> list=userRepository.getUserByNameAnAndCity("user2","city2");
+//          System.out.println(list);
+
+//        USING SQL QUERY
+        List<User> list=userRepository.getAll();
+        System.out.println(list);
+
     }
 
 }
