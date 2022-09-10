@@ -15,8 +15,15 @@ import java.util.Optional;
 public class SpringprojectApplication {
 
     public static void main(String[] args) {
-       ApplicationContext context= SpringApplication.run(SpringprojectApplication.class, args);
-        UserRepository userRepository=context.getBean(UserRepository.class);
+        SpringApplication.run(SpringprojectApplication.class, args);
+
+
+
+
+
+//        ******************************TESTING PURPOSE***************************
+//       ApplicationContext context= SpringApplication.run(SpringprojectApplication.class, args);
+//        UserRepository userRepository=context.getBean(UserRepository.class);
 //        User user=new User();
 //        user.setName("Sneha");
 //        user.setCity("Hubli");
@@ -88,8 +95,8 @@ public class SpringprojectApplication {
 //          System.out.println(list);
 
 //        USING SQL QUERY
-        List<User> list=userRepository.getAll();
-        System.out.println(list);
+//        List<User> list=userRepository.getAll();
+//        System.out.println(list);
 
     }
 
