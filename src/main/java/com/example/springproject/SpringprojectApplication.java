@@ -1,15 +1,7 @@
 package com.example.springproject;
 
-import com.example.springproject.daos.UserRepository;
-import com.example.springproject.models.User;
-import org.hibernate.dialect.MySQL55Dialect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 @SpringBootApplication
 public class SpringprojectApplication {
@@ -23,7 +15,7 @@ public class SpringprojectApplication {
 
 //        ******************************TESTING PURPOSE***************************
 //       ApplicationContext context= SpringApplication.run(SpringprojectApplication.class, args);
-//        UserRepository userRepository=context.getBean(UserRepository.class);
+//        UserDao userRepository=context.getBean(UserDao.class);
 //        User user=new User();
 //        user.setName("Sneha");
 //        user.setCity("Hubli");
