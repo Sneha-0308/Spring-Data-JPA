@@ -55,4 +55,21 @@ public class BookController {
     return bookService.getBookById(id);
 
     }
+
+    @PostMapping("/books")
+    public Book addBook(@RequestBody Book book){
+        Book b=bookService.addBook(book);
+        return b;
+    }
+
+    @DeleteMapping("/books/{bookid}")
+    public void deleteBook(@PathVariable("bookid") int id){
+        bookService.deleteBook(id);
+    }
+
+    @PutMapping("/books/{id}")
+    public Book updateBook(@RequestBody Book book,@PathVariable("id") int id){
+        bookService.updateBook(book,id);
+        return book;
+    }
 }
