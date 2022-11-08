@@ -1,5 +1,7 @@
 package com.example.springproject.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,9 @@ public class Author {
     private String firstName;
     private String lastName;
     private String language;
+    @OneToOne(mappedBy = "author")
+    @JsonBackReference
+    private Book book;
 
     public Author() {
     }
@@ -51,6 +56,14 @@ public class Author {
 
     public void setLanguage(String language) {
         this.language = language;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     @Override
